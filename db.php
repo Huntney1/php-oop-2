@@ -1,14 +1,13 @@
-<?php
 
+<?php
+include __DIR__. "/Models/Shop.php";
 include __DIR__. "/Models/Prodotto.php";
+include __DIR__. "/Models/Gioco.php";
 include __DIR__. "/Models/Cibo.php";
-include __DIR__. "/Models/Cuccia.php";
-include __DIR__. "/Models/Gioco.php"; 
-include __DIR__. "/Models/Shop.php"; 
+include __DIR__. "/Models/Accessori.php";
 
-?>
 
-<?php
+
 function creaShop(){
 // Creo un'istanza della classe Shop e aggiungo alcuni prodotti.
 $shop = new Shop();
@@ -33,9 +32,5 @@ $shop->addProdotto($cibo);
 $shop->addProdotto($gioco);
 $shop->addProdotto($accessori);
 
-// Stampare le cd dei prodotti.
-$shop->stampaProdotti();
-
 }
 ?>
-ar

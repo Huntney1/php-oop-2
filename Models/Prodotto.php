@@ -13,7 +13,6 @@ class Prodotto {
         $this->iconaCategoria = $iconaCategoria;
     }
 
-
 }
 
 ?>

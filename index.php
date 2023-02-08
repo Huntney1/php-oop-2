@@ -8,6 +8,11 @@ error_reporting(E_ALL);
 
 <?php
 
+/* include __DIR__. "/Models/Shop.php";
+include __DIR__. "/Models/Prodotto.php";
+include __DIR__. "/Models/Gioco.php";
+include __DIR__. "/Models/Cibo.php";
+include __DIR__. "/Models/Accessori.php"; */
 include __DIR__. "/db.php";
 
 ?>
@@ -38,11 +43,11 @@ include __DIR__. "/db.php";
     <!-- CDN Font-Awesome (Icons)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-
-
 </head>
 
 <body>
+
+
 
 </body>
 

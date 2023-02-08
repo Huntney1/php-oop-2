@@ -1,6 +1,4 @@
 <?php
-include __DIR__. "/Prodotto.php";
-include __DIR__. "/db.php";
 
 class Shop
 {
@@ -11,3 +9,5 @@ class Shop
         $this->prodotti[] = $prodotto;
     }
 }
+
+?>
