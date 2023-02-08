@@ -11,10 +11,16 @@ include "Models/Prodotto.php";
 <?php
 
 class Gioco extends Prodotto {
-    protected $tipoProdotto = "Gioco";
+    
+    public $descrizione;
+    public $dimensione;
 
-    public function getTipoProdotto() {
-        return $this->tipoProdotto;
+    public function __construct($titolo, $prezzo, $immagine, $iconaCategoria, $descrizione, $dimensione, )
+    {
+        parent::__construct($titolo, $prezzo, $immagine, $iconaCategoria);
+        $this->descrizione = $descrizione;
+        $this->dimensione = $dimensione;
     }
+
 }
 ?>

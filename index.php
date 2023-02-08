@@ -43,7 +43,7 @@ include __DIR__. "/db.php";
 </head>
 
 <body>
-   
+
 </body>
 
 </html>

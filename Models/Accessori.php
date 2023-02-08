@@ -1,8 +1,4 @@
 <?php
-//servono per mostrare gli errori
-/* ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); */
 
 include "Models/Prodotto.php";
 
@@ -11,11 +7,17 @@ include "Models/Prodotto.php";
 <?php
 
 class Accessori extends Prodotto {
-    protected $tipoProdotto = "Accessori";
+    public $materiale;
+    public $dimensione; 
 
-    public function getTipoProdotto() {
-        return $this->tipoProdotto;
+    public function __construct($titolo, $prezzo, $immagine, $iconaCategoria, $materiale, $dimensione,)
+    {
+        parent::__construct($titolo, $prezzo, $immagine, $iconaCategoria);
+    
+        $this->materiale = $materiale;
+        $this->dimensione = $dimensione;
     }
 }
 
 ?>
+
