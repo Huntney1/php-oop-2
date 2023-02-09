@@ -13,5 +13,14 @@ class Gioco extends Prodotto {
         $this->dimensione = $dimensione;
     }
 
+
+    public function getDescrizione() {
+        return $this->descrizione;
+    }
+
+    public function getDimensione() {
+        return $this->dimensione;
+    }
+
 }
 ?>

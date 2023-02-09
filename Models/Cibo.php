@@ -14,6 +14,14 @@ class Cibo extends Prodotto {
         $this->ingredienti = $ingredienti;
     }
 
+    public function getPeso() {
+        return $this->peso;
+    }
+
+    public function getIngredienti() {
+        return $this->ingredienti;
+    }
+
 }
 
 ?>

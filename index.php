@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 ?>
 
 <?php
- include __DIR__ . "/Models/Shop.php";
+include __DIR__ . "/Models/Shop.php";
 include __DIR__ . "/Models/Prodotto.php";
 include __DIR__ . "/Models/Gioco.php";
 include __DIR__ . "/Models/Cibo.php";
@@ -45,10 +45,10 @@ include __DIR__ . "/db.php";
 </head>
 
 <body >
-    <div class="container mt-2" style="background-color: #13005A;">
+    <div class="container col-12 mt-2" style="background-color: #13005A;">
         <div class="row d-flex flex-wrap justify-content-around">
             <?php foreach($shop->prodotti as $prodotto) { ?>
-                <div class="col-4 mt-2">
+                <div class="col-md-5 mt-2">
                     <div class="card col-7">
                         <img src="<?php echo $prodotto->immagine;?>" class="img-fluid"/>
                         <h4><?php echo $prodotto->titolo; ?></h4>
@@ -59,7 +59,7 @@ include __DIR__ . "/db.php";
                                 <!-- Cibo -->
                             <?php if(get_class($shop) == 'Cibo') { ?>
                                 <p class="p-1">
-                                   Peso netto:<?php echo $shop->peso; ?>  
+                                   Peso netto:<?php echo $prodotto->Peso ; ?>  
                                 </p>
 
                                 <p class="p-2">
@@ -70,11 +70,11 @@ include __DIR__ . "/db.php";
                                 <!-- Gioco -->
                             <?php if(get_class($shop) == 'Gioco') { ?>
                                 <p class="p-1">
-                                   Descrizione del Prodotto:<?php echo $Prodotto->descrizione; ?>  
+                                   Descrizione del Prodotto:<?php echo $prodotto->descrizione; ?>  
                                 </p>
 
                                 <p class="p-2">
-                                   Dimensioni:<?php echo $Prodotto->dimensione; ?>  
+                                   Dimensioni:<?php echo $shop->$prodotto; ?>  
                                 </p>  
                             <?php } ?>
 

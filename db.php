@@ -1,6 +1,7 @@
 
 <?php
 
+
 // Creo un'istanza della classe Shop e aggiungo alcuni prodotti.
 $shop = new Shop();
 
