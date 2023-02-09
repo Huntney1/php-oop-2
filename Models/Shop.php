@@ -9,7 +9,7 @@ class Shop
         $this->prodotti[] = $prodotto;
     }
 
-    public function stampaCards()
+    /* public function stampaCards()
     {
         foreach ($this->prodotti as $prodotto) {
             echo "<div class='card'>";
@@ -23,7 +23,7 @@ class Shop
             echo "</div>";
             echo "</div>";
         }
-    }
+    } */
 
 } 
 

@@ -29,5 +29,5 @@ $accessori = new Accessori("Voliera Wilma in Legno",  "https://arcaplanet.vtexas
 $shop->addProdotto($cibo);
 $shop->addProdotto($gioco);
 $shop->addProdotto($accessori);
-$shop->stampaCards(); 
+/* $shop->stampaCards(); */ 
 ?>
