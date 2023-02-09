@@ -17,14 +17,14 @@ class Shop
             echo "<h5 class='card-title'>" . $prodotto->titolo . "</h5>";
             echo "</div>";
             echo "<div class='card-body'>";
-            echo "<p class='card-text'>Prezzo: " . $prodotto->prezzo . "</p>";
-            echo "<p class='card-text'>Immagine: " . $prodotto->immagine . "</p>";
+            echo "<img class='card-img' src=". $prodotto->immagine ." >";
             echo "<p class='card-text'>Icone categoria: " . $prodotto->iconaCategoria . "</p>";
+            echo "<p class='card-text'>Prezzo: " . $prodotto->prezzo . "</p>";
             echo "</div>";
             echo "</div>";
         }
     }
 
-}
+} 
 
 ?>

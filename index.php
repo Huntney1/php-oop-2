@@ -47,13 +47,43 @@ include __DIR__ . "/db.php";
 <body>
     <div class="container">
         <div class="row">
-            
+            <?php foreach($shop as $prodotto) {?>
                 <div class="col-sm-4">
-                    <pre>
-                   <?php   var_dump($shop);  ?>
-                    </pre>
+                    <div class="card">
+                        <img src="<?php echo $prodotto->$immagine;?>" class="img-fluid"/>
+                        <h4><?php echo $prodotto->$titolo; ?></h4>
+                        <p>
+                            Prezzo €:<?php echo $prodotto->$prezzo; ?>
+                        </p>
+                        <p>
+                            <!-- controlli -->
+                            <?php 
+                            if(isset($prodotto->$ingredienti)){
+                                echo implode(',', $prodotto->$ingredienti);
+                            } 
+
+                            if(isset($prodotto->$peso)){
+                                echo $prodotto->$peso;
+                            } 
+
+
+                            if(isset($prodotto->$materiale)){
+                                echo $prodotto->$materiale;
+                            } 
+                            
+                            if(isset($prodotto->$dimensione)){
+                                echo $prodotto->$dimensione;
+                            }
+
+                            if(isset($prodotto->$descrizione)){
+                                echo $prodotto->$descrizione;
+                            } 
+
+                            ?>
+                        </p>
+                    </div>
                 </div>
-           
+           <?php } ?>
         </div>
     </div>
 
