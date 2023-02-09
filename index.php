@@ -7,8 +7,7 @@ error_reporting(E_ALL);
 ?>
 
 <?php
-
-include __DIR__ . "/Models/Shop.php";
+ include __DIR__ . "/Models/Shop.php";
 include __DIR__ . "/Models/Prodotto.php";
 include __DIR__ . "/Models/Gioco.php";
 include __DIR__ . "/Models/Cibo.php";
@@ -46,7 +45,18 @@ include __DIR__ . "/db.php";
 </head>
 
 <body>
-<h1>Prova</h1>
+    <div class="container">
+        <div class="row">
+            
+                <div class="col-sm-4">
+                    <pre>
+                   <?php   var_dump($shop);  ?>
+                    </pre>
+                </div>
+           
+        </div>
+    </div>
+
   
 </body>
 

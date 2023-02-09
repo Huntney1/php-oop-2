@@ -17,7 +17,7 @@ class Prodotto {
     public function getTitolo(){
         return $this->titolo;
     }
-    
+
     public function getPrezzo() {
         return $this->prezzo;
     }
