@@ -8,7 +8,7 @@ class Gioco extends Prodotto {
 
     public function __construct($titolo, $immagine, $iconaCategoria, $prezzo, $descrizione, $dimensione)
     {
-        parent::__construct($titolo, $immagine, $prezzo,  $iconaCategoria);
+        parent::__construct($titolo, $immagine, $iconaCategoria, $prezzo);
         $this->descrizione = $descrizione;
         $this->dimensione = $dimensione;
     }

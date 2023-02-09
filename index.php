@@ -44,42 +44,53 @@ include __DIR__ . "/db.php";
 
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <?php foreach($shop as $prodotto) {?>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img src="<?php echo $prodotto->$immagine;?>" class="img-fluid"/>
-                        <h4><?php echo $prodotto->$titolo; ?></h4>
+<body >
+    <div class="container mt-2" style="background-color: #13005A;">
+        <div class="row d-flex flex-wrap justify-content-around">
+            <?php foreach($shop->prodotti as $prodotto) { ?>
+                <div class="col-4 mt-2">
+                    <div class="card col-7">
+                        <img src="<?php echo $prodotto->immagine;?>" class="img-fluid"/>
+                        <h4><?php echo $prodotto->titolo; ?></h4>
                         <p>
-                            Prezzo €:<?php echo $prodotto->$prezzo; ?>
+                            Prezzo €:<?php echo $prodotto->prezzo; ?>
                         </p>
                         <p>
-                            <!-- controlli -->
-                            <?php 
-                            if(isset($prodotto->$ingredienti)){
-                                echo implode(',', $prodotto->$ingredienti);
-                            } 
+                                <!-- Cibo -->
+                            <?php if(get_class($shop) == 'Cibo') { ?>
+                                <p class="p-1">
+                                   Peso netto:<?php echo $shop->peso; ?>  
+                                </p>
 
-                            if(isset($prodotto->$peso)){
-                                echo $prodotto->$peso;
-                            } 
+                                <p class="p-2">
+                                   Ingredienti:<?php echo implode(', ', $Prodotto->ingredienti); ?>  
+                                </p>  
+                            <?php } ?>
 
+                                <!-- Gioco -->
+                            <?php if(get_class($shop) == 'Gioco') { ?>
+                                <p class="p-1">
+                                   Descrizione del Prodotto:<?php echo $Prodotto->descrizione; ?>  
+                                </p>
 
-                            if(isset($prodotto->$materiale)){
-                                echo $prodotto->$materiale;
-                            } 
-                            
-                            if(isset($prodotto->$dimensione)){
-                                echo $prodotto->$dimensione;
-                            }
+                                <p class="p-2">
+                                   Dimensioni:<?php echo $Prodotto->dimensione; ?>  
+                                </p>  
+                            <?php } ?>
 
-                            if(isset($prodotto->$descrizione)){
-                                echo $prodotto->$descrizione;
-                            } 
+                                <!-- Accessori -->
+                            <?php if(get_class($shop) == 'Accessori') { ?>
+                                <p class="p-1">
+                                   Materiale:<?php echo $Prodotto->materiale; ?>  
+                                </p>
 
-                            ?>
+                                <p class="p-2">
+                                   Dimensioni:<?php echo $Prodotto->dimensione; ?>  
+                                </p>  
+                            <?php } ?>
+
+                       
+
                         </p>
                     </div>
                 </div>

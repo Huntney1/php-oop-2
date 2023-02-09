@@ -2,7 +2,7 @@
 
 class Shop
 {
-    protected $prodotti = [];
+    public $prodotti = [];
 
     public function addProdotto(Prodotto $prodotto)
     {
