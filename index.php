@@ -50,42 +50,43 @@ include __DIR__ . "/db.php";
             <?php foreach($shop->prodotti as $prodotto) { ?>
                 <div class="col-md-5 mt-2">
                     <div class="card col-7">
-                        <img src="<?php echo $prodotto->immagine;?>" class="img-fluid"/>
-                        <h4><?php echo $prodotto->titolo; ?></h4>
+                        <img src="<?php echo $prodotto->getImmagine();?>" class="img-fluid"/>
+                        <h4><?php echo $prodotto->getTitolo(); ?></h4>
+                        <p><?php echo $prodotto->getIconaCategoria(); ?></p>
                         <p>
-                            Prezzo €:<?php echo $prodotto->prezzo; ?>
+                            Prezzo: <?php echo $prodotto->getPrezzo() . ' €'; ?>
                         </p>
                         <p>
                                 <!-- Cibo -->
                             <?php if(get_class($shop) == 'Cibo') { ?>
                                 <p class="p-1">
-                                   Peso netto:<?php echo $prodotto->Peso ; ?>  
+                                   Peso netto: <?php echo $prodotto->getPeso() ; ?>  
                                 </p>
 
                                 <p class="p-2">
-                                   Ingredienti:<?php echo implode(', ', $Prodotto->ingredienti); ?>  
+                                   Ingredienti: <?php echo implode(', ', $Prodotto->getIngredienti()); ?>  
                                 </p>  
                             <?php } ?>
 
                                 <!-- Gioco -->
                             <?php if(get_class($shop) == 'Gioco') { ?>
                                 <p class="p-1">
-                                   Descrizione del Prodotto:<?php echo $prodotto->descrizione; ?>  
+                                   Descrizione: <?php echo $prodotto->getDescrizione(); ?>  
                                 </p>
 
-                                <p class="p-2">
-                                   Dimensioni:<?php echo $shop->$prodotto; ?>  
+                                <p class="p-1">
+                                   Dimensioni: <?php echo $prodotto->getDimensione(); ?>  
                                 </p>  
                             <?php } ?>
 
                                 <!-- Accessori -->
                             <?php if(get_class($shop) == 'Accessori') { ?>
                                 <p class="p-1">
-                                   Materiale:<?php echo $Prodotto->materiale; ?>  
+                                   Materiale: <?php echo $Prodotto->getMateriale(); ?>  
                                 </p>
 
-                                <p class="p-2">
-                                   Dimensioni:<?php echo $Prodotto->dimensione; ?>  
+                                <p class="p-1">
+                                   Dimensioni: <?php echo $Prodotto->getDimensione(); ?>  
                                 </p>  
                             <?php } ?>
 
