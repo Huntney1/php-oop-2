@@ -68,6 +68,8 @@ include __DIR__ . "/db.php";
                                 </p>  
                             <?php } ?>
 
+                            
+
                                 <!-- Gioco -->
                             <?php if(get_class($shop) == 'Gioco') { ?>
                                 <p class="p-1">
@@ -77,7 +79,9 @@ include __DIR__ . "/db.php";
                                 <p class="p-1">
                                    Dimensioni: <?php echo $prodotto->getDimensione(); ?>  
                                 </p>  
-                            <?php } ?>
+                            <?php } ?><pre>
+                             <?php   var_dump(Gioco) ?>
+                            </pre>
 
                                 <!-- Accessori -->
                             <?php if(get_class($shop) == 'Accessori') { ?>
