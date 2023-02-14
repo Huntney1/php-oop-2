@@ -29,5 +29,5 @@ $shop->addProdotto($giocoCani);
 $shop->addProdotto($giocoGatti);
 $shop->addProdotto($accessoriPesci);
 $shop->addProdotto($accessoriVolatili);
-/* $shop->stampaCards(); */ 
+$shop->stampaCards(); 
 ?>

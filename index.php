@@ -44,65 +44,7 @@ include __DIR__ . "/db.php";
 
 </head>
 
-<body >
-    <div class="container col-12 mt-2" style="background-color: #13005A;">
-        <div class="row d-flex flex-wrap justify-content-around">
-            <?php foreach($shop->prodotti as $prodotto) { ?>
-                <div class="col-md-5 mt-2">
-                    <div class="card col-7">
-                        <img src="<?php echo $prodotto->getImmagine();?>" class="img-fluid"/>
-                        <h4><?php echo $prodotto->getTitolo(); ?></h4>
-                        <p><?php echo $prodotto->getIconaCategoria(); ?></p>
-                        <p>
-                            Prezzo: <?php echo $prodotto->getPrezzo() . ' €'; ?>
-                        </p>
-                        <p>
-                                <!-- Cibo -->
-                            <?php if(get_class($shop) == 'Cibo') { ?>
-                                <p class="p-1">
-                                   Peso netto: <?php echo $prodotto->getPeso() ; ?>  
-                                </p>
-
-                                <p class="p-2">
-                                   Ingredienti: <?php echo implode(', ', $Prodotto->getIngredienti()); ?>  
-                                </p>  
-                            <?php } ?>
-
-                            
-
-                                <!-- Gioco -->
-                            <?php if(get_class($shop) == 'Gioco') { ?>
-                                <p class="p-1">
-                                   Descrizione: <?php echo $prodotto->getDescrizione(); ?>  
-                                </p>
-
-                                <p class="p-1">
-                                   Dimensioni: <?php echo $prodotto->getDimensione(); ?>  
-                                </p>  
-                            <?php } ?><pre>
-                             <?php   var_dump(Gioco) ?>
-                            </pre>
-
-                                <!-- Accessori -->
-                            <?php if(get_class($shop) == 'Accessori') { ?>
-                                <p class="p-1">
-                                   Materiale: <?php echo $Prodotto->getMateriale(); ?>  
-                                </p>
-
-                                <p class="p-1">
-                                   Dimensioni: <?php echo $Prodotto->getDimensione(); ?>  
-                                </p>  
-                            <?php } ?>
-
-                       
-
-                        </p>
-                    </div>
-                </div>
-           <?php } ?>
-        </div>
-    </div>
-
+<body>
   
 </body>
 
